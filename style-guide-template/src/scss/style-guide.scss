@@ -1,6 +1,7 @@
 @import 'partials/reset';
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
+@import 'partials/variables';
 @import 'partials/typography';
 
 
@@ -334,4 +335,4 @@ select {
 }
 
 @import 'partials/basic-style';
-@import 'partials/variables';
+
