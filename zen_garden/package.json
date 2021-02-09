@@ -1,5 +1,18 @@
 {
-  "dependencies": {
+  "name": "zen-garden-group4",
+  "version": "1.0.0",
+  "description": "Zen Garden - Group 4",
+  "scripts": {
+    "prestart": "rimraf src/style.*",
+    "start": "parcel src/js/parcel.js -d src/ -o style.css",
+    "prebuild": "rimraf dist/*",
+    "build": "parcel build src/js/parcel.js --public-url ./ -o style.css",
+    "watch": "parcel watch src/js/parcel.js -d src/ -o style.css"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.2",
     "sass": "^1.32.6"
   }
 }
