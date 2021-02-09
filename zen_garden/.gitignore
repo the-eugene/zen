@@ -1,8 +1,10 @@
 .cache
 .DS_Store
 .env
-*.css
 build
 node_modules
 npm-debug.log
-
+style.css
+style.css.map
+style.js
+style.js.map
