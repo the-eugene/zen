@@ -5,3 +5,37 @@
 @import 'partials/typography';
 @import 'partials/navigation';
 
+
+@mixin small {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: $color-5;
+    @media only screen and (max-width: 420px) {
+        @content;
+    }
+    color: $color-1; 
+    p {
+        font-family: $primary-font;
+        font-size: 1em;
+        }
+    h1, h2, h3 {
+        font-family: $secondary-font;
+        padding: 10px;
+    }
+    h1, h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    
+}
+
+.page-wrapper {
+    @include small {
+        
+    }
+}

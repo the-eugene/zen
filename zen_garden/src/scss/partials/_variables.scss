@@ -14,3 +14,11 @@ $alert: #b3320b; // red
 // fonts
 $primary-font: 'Raleway', sans-serif;
 $secondary-font: 'Tangerine', cursive;
+
+// breakpoints
+$breakpoints: (
+  "phone": 420px,
+  "tablet": 768px,
+  "desktop": 1366px,
+ ) !default; 
+
