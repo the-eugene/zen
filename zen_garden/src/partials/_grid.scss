@@ -1,0 +1,18 @@
+// Variables
+$num-columns: 2;
+$single-column-width: 100% / $num-columns;
+
+@mixin flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
+}
+
+@mixin col($span-num) {
+    flex: 0 0 $single-column-width * $span-num;
+}
+
+@mixin offset($offset-num) {
+    margin-left: $single-column-width * $offset-num;
+}

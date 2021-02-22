@@ -1,3 +1,6 @@
+
+@import 'grid';
+
 // Variables
 $large-screen-size: 960px;
 $padding-average-length: 10px;
@@ -104,5 +107,48 @@ div.benefits>p:last-child::after {
 
 // Large layout
 @media screen and (min-width: $large-screen-size) {
+    .page-wrapper {
+        margin: 0 auto;
+        max-width: $large-screen-size;
+    }
 
+    section.intro {
+        @include flex-container;
+    }
+
+    header[role=banner] {
+        @include offset(1);   
+    }
+
+    div.summary {
+        @include offset(1);
+    }
+
+    div.preamble {
+        @include col(1);
+    }
+
+    div.main {
+        @include flex-container;
+    }
+
+    div.explanation {
+        @include offset(1);
+    }
+
+    div.participation {
+        @include col(1);
+    }
+
+    div.benefits {
+        @include offset(1);
+    }
+
+    div.requirements {
+        @include col(1);
+    }
+
+    footer {
+        @include offset(1);
+    }
 }
