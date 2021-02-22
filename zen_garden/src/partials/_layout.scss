@@ -1,0 +1,108 @@
+// Variables
+$large-screen-size: 960px;
+$padding-average-length: 10px;
+
+// Mixins
+@mixin section-icon($imageUrl) {
+    content: url($imageUrl);
+    display: block;
+    margin: auto 0;
+    padding-top: $padding-average-length * 2;
+    text-align: center;
+}
+
+// Main layout
+h1 {
+    font-family: $secondary-font;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: $padding-average-length $padding-average-length $padding-average-length * 5 $padding-average-length;
+}
+
+h2 {
+    font-family: $primary-font;
+    font-size: 1.7em;
+    padding: 0px $padding-average-length $padding-average-length $padding-average-length;
+}
+
+h3 {
+    font-family: $primary-font;
+    font-size: 1.5em;
+    padding: $padding-average-length;
+}
+
+p {
+    font-family: $primary-font;
+    font-size: 1em;
+    padding: $padding-average-length;
+    line-height: 1.2;
+}
+
+a {
+    color: $color-2;
+}
+
+footer a {
+    padding: $padding-average-length $padding-average-length * 4 $padding-average-length $padding-average-length;
+}
+
+nav {
+    padding: $padding-average-length;
+    line-height: 2;
+}
+
+.page-wrapper {
+    background-color: $page-background-color;
+    color: $page-font-color;
+    padding: $padding-average-length * 2;
+}
+
+.zen-resources ul {
+    padding: $padding-average-length;
+    line-height: 1.6;
+}
+
+aside.sidebar {
+    padding-top: $padding-average-length * 3;
+}
+
+footer>a {
+    display: block;
+    padding: $padding-average-length / 2 $padding-average-length;
+    text-align: center;
+}
+
+// Images
+header[role=banner]>h1::after {
+    content: url(https://via.placeholder.com/75x50);
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: $padding-average-length * 2;
+    margin-right: $padding-average-length * 3;
+}
+
+div.summary>p:nth-child(2)::after {
+    @include section-icon('https://via.placeholder.com/50x50');
+} 
+
+div.preamble>p:last-child::after {
+    @include section-icon('https://via.placeholder.com/50x50');
+}
+
+div.explanation>p:last-child::after {
+    @include section-icon('https://via.placeholder.com/50x50');
+}
+
+div.participation>p:last-child::after {
+    @include section-icon('https://via.placeholder.com/50x50');
+}
+
+div.benefits>p:last-child::after {
+    @include section-icon('https://via.placeholder.com/50x50');
+}
+
+// Large layout
+@media screen and (min-width: $large-screen-size) {
+
+}
