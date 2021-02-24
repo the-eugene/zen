@@ -105,4 +105,70 @@ div.benefits>p:last-child::after {
 // Large layout
 @media screen and (min-width: $large-screen-size) {
 
+    .page-wrapper {
+       display: grid;
+       grid-template-columns: auto auto;
+       grid-template-rows: repeat (10, auto);
+       grid-column-gap: 3%;
+       background: url("../images/abstract%20forest3-01.svg");
+    }
+   
+    .intro,
+    .main.supporting,
+    .sidebar {
+        display: contents;
+    }
+
+    //section 1
+
+    .intro h1 {
+        font-size: 5.0em;
+        margin-top: 50px;
+        align-content: center;
+    }
+    header { 
+           grid-column: 2 / 2;
+           grid-row: 1 / 2;
+       }
+    
+    .summary { 
+           grid-column: 2 / 2;
+           grid-row: 2 / 3;
+       }
+
+    .preamble {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+
+    //section 2
+
+    .explanation {
+        grid-column: 2 / 2;
+        grid-row: 4 / 5;
+    }
+    .participation {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+    .benefits {
+        grid-column: 2 / 2;
+        grid-row: 6 / 7;
+    }
+    .requirements {
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+    }
+    footer {
+        grid-column: 2 / 2;
+        grid-row: 9 / 9;
+        
+    }
+    
+    //section 3
+
+    .wrapper {
+        grid-column: 2 / 2;
+        grid-row: 7 / 8;
+    }
 }
