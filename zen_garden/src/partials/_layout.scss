@@ -84,7 +84,7 @@ header[role=banner]>h1::after {
 
 div.summary>p:nth-child(2)::after {
     @include section-icon('https://via.placeholder.com/50x50');
-} 
+}
 
 div.preamble>p:last-child::after {
     @include section-icon('https://via.placeholder.com/50x50');
@@ -106,13 +106,13 @@ div.benefits>p:last-child::after {
 @media screen and (min-width: $large-screen-size) {
 
     .page-wrapper {
-       display: grid;
-       grid-template-columns: auto auto;
-       grid-template-rows: repeat (10, auto);
-       grid-column-gap: 3%;
-       background: url("../images/abstract%20forest3-01.svg");
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat (10, auto);
+        grid-column-gap: 3%;
+        background: url("../images/abstract%20forest3-01.svg");
     }
-   
+
     .intro,
     .main.supporting,
     .sidebar {
@@ -126,20 +126,25 @@ div.benefits>p:last-child::after {
         margin-top: 50px;
         align-content: center;
     }
-    header { 
-           grid-column: 2 / 2;
-           grid-row: 1 / 2;
-       }
-    
-    .summary { 
-           grid-column: 2 / 2;
-           grid-row: 2 / 3;
-       }
+
+    header {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .summary {
+        grid-column: 2 / 2;
+        grid-row: 2 / 3;
+    }
 
     .preamble {
-            grid-column: 1 / 2;
-            grid-row: 3 / 4;
-        }
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
 
     //section 2
 
@@ -147,24 +152,30 @@ div.benefits>p:last-child::after {
         grid-column: 2 / 2;
         grid-row: 4 / 5;
     }
+
     .participation {
         grid-column: 1 / 2;
         grid-row: 5 / 6;
     }
+
     .benefits {
         grid-column: 2 / 2;
         grid-row: 6 / 7;
     }
+
     .requirements {
         grid-column: 1 / 2;
         grid-row: 7 / 8;
     }
+
     footer {
-        grid-column: 2 / 2;
+        grid-column: 1 / 3;
         grid-row: 9 / 9;
-        
+
+        display: flex;
+        justify-content: center;
     }
-    
+
     //section 3
 
     .wrapper {
