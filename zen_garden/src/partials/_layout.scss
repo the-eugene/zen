@@ -13,33 +13,19 @@ $padding-average-length: 10px;
 
 // Main layout
 h1 {
-    font-family: $secondary-font;
-    font-size: 2.5em;
-    font-weight: bold;
     padding: $padding-average-length $padding-average-length $padding-average-length * 5 $padding-average-length;
 }
 
 h2 {
-    font-family: $primary-font;
-    font-size: 1.7em;
     padding: 0px $padding-average-length $padding-average-length $padding-average-length;
 }
 
 h3 {
-    font-family: $primary-font;
-    font-size: 1.5em;
     padding: $padding-average-length;
 }
 
 p {
-    font-family: $primary-font;
-    font-size: 1em;
     padding: $padding-average-length;
-    line-height: 1.2;
-}
-
-a {
-    color: $color-2;
 }
 
 footer a {
@@ -52,8 +38,6 @@ nav {
 }
 
 .page-wrapper {
-    background-color: $page-background-color;
-    color: $page-font-color;
     padding: $padding-average-length * 2;
 }
 
@@ -110,7 +94,6 @@ div.benefits>p:last-child::after {
         grid-template-columns: auto auto;
         grid-template-rows: repeat (10, auto);
         grid-column-gap: 3%;
-        background: url("../images/abstract%20forest3-01.svg");
     }
 
     .intro,

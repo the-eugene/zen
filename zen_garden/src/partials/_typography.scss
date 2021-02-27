@@ -3,3 +3,26 @@
 // fonts
 $primary-font: 'Raleway', sans-serif;
 $secondary-font: 'Tangerine', cursive;
+
+h1 {
+    font-family: $secondary-font;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: $primary-font;
+    font-size: 1.7em;
+}
+
+
+h3 {
+    font-family: $primary-font;
+font-size: 1.5em;
+}
+
+p {
+    font-family: $primary-font;
+    font-size: 1em;
+    line-height: 1.2;
+}
