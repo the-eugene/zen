@@ -16,7 +16,7 @@ $success: #6fce72; // green
 $alert: #b3320b; // red
 
 body{
-    background: $page-background-color url("../images/abstract%20forest3-01.svg") no-repeat bottom center;
+    background: $page-background-color url("images/abstract%20forest3-01.svg") no-repeat bottom center;
     background-size: contain;
 }
 
@@ -26,7 +26,7 @@ a {
 
 .page-wrapper {
     color: darken($page-font-color, 10%);
-    background: url("../images/cloud1.svg") no-repeat;
+    background: url("images/cloud1.svg") no-repeat;
     animation: clouds 60s linear infinite;
 }
 
