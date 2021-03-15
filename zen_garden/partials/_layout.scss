@@ -118,6 +118,9 @@ div.benefits>p:last-child::after {
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
+    header h2 {
+        padding-top: 130px;
+    }
 
     .summary {
         grid-column: 2 / 2;
@@ -156,7 +159,8 @@ div.benefits>p:last-child::after {
         grid-row: 9 / 9;
 
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        padding: 50px 50px 30px 50px;
     }
 
     //section 3
