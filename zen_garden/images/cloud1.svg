@@ -4,21 +4,37 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
  
-width="1000" height="1000">
-  <circle id="aCloud" cx="50%" cy="50%" r="300" filter="url(#cloud)" fill="white" transform="scale(1.25,1) translate(-50,0)"/>
-  <filter id="cloud" x="-100%" y="-100%" width="300%" height="300%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-	<feGaussianBlur stdDeviation="10" in="SourceGraphic" result="blur1"/>
-	<feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.01" numOctaves="10" seed="2"/>
-	<feDisplacementMap in="blur1" scale="180"  result="displacementMap"/>
+width="2000" height="1000">
+  <!--circle id="aCloud" cx="50%" cy="50%" r="300" filter="url(#cloud)" fill="white" transform="scale(1.25,1) translate(-50,0)"/-->
+  <defs>
+    <path id="cloud" d="M236.26,80C236.26,123.86.5,123.86.5,80S53.28.5,118.38.5,236.26,36.08,236.26,80Z"/>
+  
+<g  id="CloudGroup">
+  <use x="50" y="50" xlink:href="#cloud" fill="#fffffff0" transform="scale(3.25)"/>
+  <use x="100" y="90" xlink:href="#cloud" fill="#f4f4f4" transform="scale(2.5)"/>
+  <use x="200" y="160" xlink:href="#cloud" fill="#eee" transform="scale(1.75)"/>
+</g>
+</defs>
+<g filter="url(#cloudFilter)">
+  <use x="0" y="200" xlink:href="#CloudGroup"/>
+  <use x="500" y="400" xlink:href="#CloudGroup"/>
+  <use x="900" y="0" xlink:href="#CloudGroup"/>
+</g>
+  <filter id="cloudFilter" x="-100%" y="-100%" width="300%" height="300%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+	<feGaussianBlur stdDeviation="20" in="SourceGraphic" result="blur1"/>
+	<feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.01" numOctaves="5" seed="2"/>
+	<feDisplacementMap in="blur1" scale="150"  result="displacementMap"/>
 </filter>
   <animate 
     xlink:href="#turbulence"
     attributeName="baseFrequency"
     from=".01"
-    to=".02" 
+    to=".01"
+    values=".01; .015; .01"
+    keyTimes="0; 0.5; 1"
     dur="60s"
     fill="freeze"
     repeatCount="indefinite"
-    direction="both"
+
      />
 </svg>

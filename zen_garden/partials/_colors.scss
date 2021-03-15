@@ -16,7 +16,7 @@ $success: #6fce72; // green
 $alert: #b3320b; // red
 
 body{
-    background: $page-background-color url("../images/abstract%20forest3-01.svg") no-repeat bottom center;
+    background: $page-background-color url("images/abstract%20forest3-01.svg") no-repeat bottom center;
     background-size: contain;
 }
 
@@ -26,12 +26,15 @@ a {
 
 .page-wrapper {
     color: darken($page-font-color, 10%);
-    background: url("../images/cloud1.svg") no-repeat;
-    animation: clouds 60s linear infinite;
+    background: url("images/cloud1.svg") repeat-x, url("images/cloud1.svg") repeat-x, url("images/cloud1.svg") repeat-x;
+    background-size: 1000px, 500px, 700px;
+    animation: clouds 10s linear infinite;
 }
 
 @keyframes clouds {
-    from {background-position-x: -10% ;}
-    to {background-position-x: 120%;}
+    from {
+        background-position: 0 0, 300px 200px, 500px -200px;
+    }
+    to {background-position: 1000px 0, 800px 200px, 1900px -200px;}
   }
 
