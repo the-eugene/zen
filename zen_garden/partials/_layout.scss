@@ -97,9 +97,13 @@ div.benefits>p:last-child::after {
     }
 
     .intro,
-    .main.supporting,
-    .sidebar {
+    .main.supporting {
         display: contents;
+    }
+
+    .sidebar {
+        grid-column: 3 / 4;
+        grid-row: 3 / 7;
     }
 
     //section 1
@@ -118,6 +122,7 @@ div.benefits>p:last-child::after {
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
+
     header h2 {
         padding-top: 130px;
     }
