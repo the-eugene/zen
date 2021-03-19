@@ -14,10 +14,16 @@ $page-font-color: $color-1;
 
 $success: #6fce72; // green
 $alert: #b3320b; // red
-
+html{background-color: $page-background-color;}
 body{
-    background: $page-background-color url("images/alt_mountains2.svg") no-repeat bottom center;
-    background-size: 100% auto;
+    color: darken($page-font-color, 10%);
+    background:  
+    url("images/alt_mountains2.svg") no-repeat bottom center,
+    url("images/cloud1.svg") repeat-x,
+    url("images/cloud1.svg") repeat-x,
+    url("images/cloud1.svg") repeat-x;
+    animation: clouds 10s linear infinite;
+    background-size: 100% auto, 1000px, 500px, 700px;
 }
 
 a {
@@ -25,16 +31,32 @@ a {
 }
 
 .page-wrapper {
-    color: darken($page-font-color, 10%);
-    background: url("images/cloud1.svg") repeat-x, url("images/cloud1.svg") repeat-x, url("images/cloud1.svg") repeat-x;
-    background-size: 1000px, 500px, 700px;
     animation: clouds 10s linear infinite;
 }
 
 @keyframes clouds {
-    from {
-        background-position: 0 0, 300px 200px, 500px -200px;
-    }
-    to {background-position: 1000px 0, 800px 200px, 1900px -200px;}
+    from {background-position: bottom center,0 0, 300px 200px, 500px -200px;}
+    to {background-position: bottom center,1000px 0, 800px 200px, 1900px -200px;}
   }
 
+  div.summary,
+  div.preamble,
+  div.explanation,
+  div.benefits,
+  div.participation,
+  div.benefits,
+  div.requirements,
+  div.design-selection,
+  div.design-archives,
+  div.zen-resources,
+  footer {
+  
+  border: 1px solid #91a5c3;
+  border-radius: 15px;
+  padding: 12px;
+  margin: 10px;
+  backdrop-filter: blur(5px) contrast(10%) saturate(400%) brightness(160%);
+  @supports not (backdrop-filter: blur(5px) contrast(10%) saturate(400%) brightness(160%)){
+    background-color: #fffb;
+  }
+}

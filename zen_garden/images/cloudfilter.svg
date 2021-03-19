@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<filter id="cloudFilter" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+	<feGaussianBlur stdDeviation="20" in="SourceGraphic" result="blur1"/>
+	<feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.01" numOctaves="4" seed="5" />
+	<feDisplacementMap in="blur1" scale="150"  result="displacementMap"/>
+</filter>
+<filter id="dilate">
+<feGaussianBlur stdDeviation="20"/>
+<feMorphology id="morph" operator="dilate" radius="20" />
+</filter>
+</svg>

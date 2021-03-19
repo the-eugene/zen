@@ -6,7 +6,9 @@
 width="2000" height="1000">
 <filter id="cloudFilter" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 	<feGaussianBlur stdDeviation="20" in="SourceGraphic" result="blur1"/>
-	<feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.01" numOctaves="4" seed="2"/>
+	<feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.01" numOctaves="4" seed="5" >
+      <animate attributeName="baseFrequency" values=".01; .015; .01" dur="25s" repeatCount="indefinite" />
+  </feTurbulence>
 	<feDisplacementMap in="blur1" scale="150"  result="displacementMap"/>
 </filter>
   <defs><path id="cloud" d="M236.26,80C236.26,123.86.5,123.86.5,80S53.28.5,118.38.5,236.26,36.08,236.26,80Z"/>
@@ -21,15 +23,5 @@ width="2000" height="1000">
   <use x="500" y="400" xlink:href="#CloudGroup"/>
   <use x="900" y="0" xlink:href="#CloudGroup"/>
 </g>
-  <animate 
-    xlink:href="#turbulence"
-    attributeName="baseFrequency"
-    from=".01"
-    to=".01"
-    values=".01; .015; .01"
-    keyTimes="0; 0.5; 1"
-    dur="25s"
-    fill="freeze"
-    repeatCount="indefinite"
-     />
+
 </svg>
