@@ -55,8 +55,9 @@ a {
   border-radius: 15px;
   padding: 12px;
   margin: 10px;
-  backdrop-filter: blur(5px) contrast(10%) saturate(400%) brightness(160%);
-  @supports not (backdrop-filter: blur(5px) contrast(10%) saturate(400%) brightness(160%)){
+  box-shadow: 5px 5px 10px #0003;
+  backdrop-filter: contrast(10%) saturate(400%) brightness(160%) blur(10px);
+  @supports not (backdrop-filter: contrast(10%) saturate(400%) brightness(160%) blur(10px)){
     background-color: #fffb;
   }
 }
