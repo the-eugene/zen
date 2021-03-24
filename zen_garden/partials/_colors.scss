@@ -1,11 +1,13 @@
 
 // color palette - these colors will be the color swatches of the Colors section
 
-$color-5: #fcf1c8;
-$color-4: #a6b4bf;
-$color-3: #928c2e;
-$color-2: #a56621;
 $color-1: #3b7492;
+$color-2: #84b2b1;
+$color-3: #2ac395;
+$color-4: #169445;
+$color-5: #5f9a18;
+$color-6: #36490b;
+$color-7: #252b06;
 
 // additional colors
 
@@ -27,7 +29,7 @@ body{
 }
 
 a {
-    color: $color-2;
+    color: $color-5;
 }
 
 .page-wrapper {

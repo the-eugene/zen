@@ -14,10 +14,15 @@ $padding-average-length: 10px;
 // Main layout
 h1 {
     padding: $padding-average-length $padding-average-length $padding-average-length * 5 $padding-average-length;
+    width: fit-content;
+    text-align: center;
+    font-size: 4.0em;
 }
 
 h2 {
     padding: 0px $padding-average-length $padding-average-length $padding-average-length;
+    z-index: 0;
+    margin-bottom: 40px;
 }
 
 h3 {
@@ -54,40 +59,52 @@ footer>a {
     display: block;
     padding: $padding-average-length / 2 $padding-average-length;
     text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-1;
+    font-weight: 600;
 }
 
 // Images
-header[role=banner]>h1::after {
-    content: url(https://via.placeholder.com/75x50);
+header[role=banner]>h2::after {
+    content: url('images/blue_bird.svg');
     position: absolute;
-    left: auto;
-    right: 0;
-    top: $padding-average-length * 2;
-    margin-right: $padding-average-length * 3;
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+    top: 0;
 }
 
 div.summary>p:nth-child(2)::after {
-    @include section-icon('https://via.placeholder.com/50x50');
+    @include section-icon('images/icon1.png');
 }
 
 div.preamble>p:last-child::after {
-    @include section-icon('https://via.placeholder.com/50x50');
+    @include section-icon('images/icon3.png');
 }
 
 div.explanation>p:last-child::after {
-    @include section-icon('https://via.placeholder.com/50x50');
+    @include section-icon('images/icon4.png');
 }
 
 div.participation>p:last-child::after {
-    @include section-icon('https://via.placeholder.com/50x50');
+    @include section-icon('images/icon2.png');
 }
 
 div.benefits>p:last-child::after {
-    @include section-icon('https://via.placeholder.com/50x50');
+    @include section-icon('images/icon5.png');
 }
 
 // Large layout
 @media screen and (min-width: $large-screen-size) {
+    header[role=banner]>h2::after {
+        content: url('images/blue_bird.svg');
+        left: auto;
+        right: auto;
+        z-index: 0;
+        top: 50px;
+        margin-right: $padding-average-length * 2;
+    }
  .page-wrapper {
         max-width: 1200px;
         margin-left: auto;
@@ -104,7 +121,8 @@ div.benefits>p:last-child::after {
 
     .sidebar {
         grid-column: 3;
-        grid-row: span 3;
+        grid-row-start: 3;
+        grid-row-end: span 3;
     }
 
     //section 1
@@ -118,15 +136,15 @@ div.benefits>p:last-child::after {
 
     header {
         grid-column: 1;
-
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 40fr 60fr;
         align-items: center;
         grid-area: 1/1/1/-1;
     }
 
     header h2 {
         padding-top: 130px;
+        width: fit-content;
     }
 
     .summary {
@@ -160,7 +178,6 @@ div.benefits>p:last-child::after {
 
     footer {
         grid-column: 1 / -1;
-
         display: flex;
         justify-content: space-around;
         padding: 50px 50px 30px 50px;
