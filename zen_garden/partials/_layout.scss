@@ -67,9 +67,10 @@ footer>a {
 
 // Images
 
+
 header[role=banner]>h2::after {
     content: '';
-    background: url('images/blue_bird.svg') center no-repeat;
+    background: url('images/blue_bird.svg') bottom left no-repeat;
     background-size: contain;
     display:block;
     position: absolute;
@@ -82,10 +83,9 @@ header[role=banner]>h2::after {
     
     @media screen and (min-width: $large-screen-size) {
         z-index: 0;
-        width: 30vw;
+        width: 29vw;
         height: 30vw;
-        top:-1vw;
-        right:-1vw;
+        background-size: 28vw;
     }
 }
 
