@@ -66,13 +66,27 @@ footer>a {
 }
 
 // Images
+
 header[role=banner]>h2::after {
-    content: url('images/blue_bird.svg');
+    content: '';
+    background: url('images/blue_bird.svg') center no-repeat;
+    background-size: contain;
+    display:block;
     position: absolute;
-    max-width: 100%;
-    height: auto;
-    z-index: -1;
+    right: 0;
     top: 0;
+    z-index: -1;
+    transform: scaleX(-1);
+    height: 250px;
+    width: 250px;
+    
+    @media screen and (min-width: $large-screen-size) {
+        z-index: 0;
+        width: 30vw;
+        height: 30vw;
+        top:-1vw;
+        right:-1vw;
+    }
 }
 
 div.summary>p:nth-child(2)::after {
@@ -97,14 +111,7 @@ div.benefits>p:last-child::after {
 
 // Large layout
 @media screen and (min-width: $large-screen-size) {
-    header[role=banner]>h2::after {
-        content: url('images/blue_bird.svg');
-        left: auto;
-        right: auto;
-        z-index: 0;
-        top: 50px;
-        margin-right: $padding-average-length * 2;
-    }
+
  .page-wrapper {
         max-width: 1200px;
         margin-left: auto;
